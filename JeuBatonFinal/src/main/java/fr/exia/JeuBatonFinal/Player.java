@@ -42,9 +42,8 @@ public class Player {
 		}
 		
 		public int IA (int StickNumber) {
-			if nb_baton
+			setSoustractionNumber((int)(Math.random() * 3));
 			return this.getSoustractionNumber();
-			
 		}
 		
 }
