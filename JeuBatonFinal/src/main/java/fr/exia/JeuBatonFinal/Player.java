@@ -1,4 +1,5 @@
 package fr.exia.JeuBatonFinal;
+import java.util.Random;
 import java.util.Scanner;
 
 
@@ -16,7 +17,7 @@ public class Player {
 		
 		
 		public int IA (int StickNumber) {
-			setSoustractionNumber((int)(Math.random() * 3));
+			setSoustractionNumber(new Random().nextInt(3)+1);
 			return this.getSoustractionNumber();
 		}
 		
