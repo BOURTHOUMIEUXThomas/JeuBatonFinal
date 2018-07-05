@@ -13,11 +13,25 @@ public class Player {
 			SoustractionNumber = 0;
 			setStick(stick);
 		}
-
-
+		
+		
+		public int IA (int StickNumber) {
+			setSoustractionNumber((int)(Math.random() * 3));
+			return this.getSoustractionNumber();
+		}
+		
 		public int getSoustractionNumber() {
 			return SoustractionNumber;
 		}
+		
+
+		public int PlayerTurn() {
+			Scanner sc = new Scanner(System.in);
+			setSoustractionNumber(sc.nextInt());
+			return getSoustractionNumber();
+			
+		}
+		
 
 
 		public void setSoustractionNumber(int soustractionNumber) {
@@ -34,16 +48,8 @@ public class Player {
 			Player.stick = stick;
 		}
 		
-		public int PlayerTurn() {
-			Scanner sc = new Scanner(System.in);
-			setSoustractionNumber(sc.nextInt());
-			return getSoustractionNumber();
-			
-		}
 		
-		public int IA (int StickNumber) {
-			setSoustractionNumber((int)(Math.random() * 3));
-			return this.getSoustractionNumber();
-		}
+		
+		
 		
 }
