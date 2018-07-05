@@ -38,7 +38,7 @@ public class ControllerTest {
 
 	@Test
 	public void testGetStick() {
-		fail("Not yet implemented");
+		
 	}
 
 	@Test
