@@ -7,11 +7,38 @@ public class Controller {
 	public  Player player;
 	public boolean Winner;
 	public  Stick stick;
-	
+	public boolean turn; 
 	public Controller() {
+		stick = new Stick();
+		player = new Player(stick);
+		ia = new Player(stick);
+		
 	}
 	
-	
+	public void NewTurn() {
+		if (turn == true) {
+			if(stick.getStickNumber() == 1) {
+				Winner = true;
+				AndTheWinnerIs();
+				System.exit(0);
+			} else {
+
+				player.PlayerTurn();
+				turn = false;
+			}
+		} else { 
+			if(stick.getStickNumber() == 1) {
+				Winner = false;
+				AndTheWinnerIs();
+				System.exit(0);
+			} else {
+				player.IA();
+				turn = true;
+			}
+		}
+		NewTurn(); 
+		
+	}
 	public void AndTheWinnerIs() {
 		if(this.isWinner() == false) {
 			System.out.println("gagné");
@@ -20,10 +47,12 @@ public class Controller {
 		}
 	}
 	
-	public int Start() {
+	public void Start() {
 		this.setStickNumber(20);
-		System.out.println("\nNombre de batons" + this.getStickNumber());
-		return stick.getStickNumber();
+		System.out.println("\nNombre de batons " + this.getStickNumber());
+		turn = true;
+		new Frame(stick);
+		NewTurn();
 	}
 	
 	
@@ -78,15 +107,8 @@ public class Controller {
 	
 	
 	
-	public int getReplay() {
-		return Replay;
-	}
+
 	
-	
-	
-	public void setReplay(int replay) {
-		Replay = replay;
-	}
 	
 	
 	
