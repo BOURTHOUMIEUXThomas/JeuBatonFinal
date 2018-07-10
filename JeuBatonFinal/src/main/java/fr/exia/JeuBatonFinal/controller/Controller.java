@@ -7,26 +7,39 @@ import fr.exia.JeuBatonFinal.model.Stick;
 import fr.exia.JeuBatonFinal.view.Frame;
 
 /**
- * 
+ * Classer controller c'est elle qui va gerer le jeu  , le lancement le deroulement ect
  * @author btxth
  *
  */
 public class Controller {
 
 	/**
-	 * 
+	 * Player ia est l'ordinateur pour le choix de jeu
 	 */
 	public Player ia;
-	
-	
+	/**
+	 * Player est le joueur 1 ou 2, ils s'alternent en cas de joueur vs joueur
+	 */
 	public Player player;
+	/**
+	 * Winner est pour celui qui a gagné boolean car il prends deux valeur soit winner soit loser (true or false)
+	 */
 	public boolean Winner;
+	/**
+	 * Stick est le nombre de bâtons 
+	 */
 	public Stick stick;
+	/**
+	 * Turn est le tour du jouer pareil boolean
+	 */
 	public boolean turn;
+	/**
+	 * oponent est le tour du joueur 2 (vu qu'on utilise deux fois la meme methode on utilise oponent pour différencier les deux
+	 */
 	public int oponent;
 
 	/**
-	 * 
+	 * Constructeur du controller // instantiation du stick et des joueurs/ia
 	 */
 	public Controller() {
 		stick = new Stick();
@@ -36,7 +49,7 @@ public class Controller {
 	}
 
 	/**
-	 * 
+	 * Tour du joueur avec le check de la victoire et le choix du joueur
 	 */
 	public void NewTurn() {
 		if (turn == true) {
@@ -74,7 +87,10 @@ public class Controller {
 		NewTurn();
 
 	}
-
+	
+	/**
+	 * Annonce du perdant / victorieux
+	 */
 	public void AndTheWinnerIs() {
 		if (this.isWinner() == false) {
 			System.out.println("gagné");
@@ -83,6 +99,9 @@ public class Controller {
 		}
 	}
 
+	/**
+	 * Méthode start qui guidera le joueur dans la console
+	 */
 	public void Start() {
 		this.setStickNumber(Math.random() * 50);
 		System.out.println("Nombre de batons " + this.getStickNumber());
@@ -105,51 +124,89 @@ public class Controller {
 		NewTurn();
 	}
 
+	/**
+	 * Méthode qui affiche le nombre de stick et le nombre de stick que l'ia a enlever
+	 * @param stickIA
+	 * @return
+	 */
 	public int IAStickSoustraction(int stickIA) {
 		System.out.println("\n	Il y a " + this.getStickNumber() + "Il a enlever" + stickIA);
 
 		return stickIA;
 
 	}
-
+	
+	/**
+	 * Set du stick
+	 * @param d
+	 */
 	private void setStickNumber(double d) {
 		// TODO Auto-generated method stub
 		stick.setStickNumber((int) d);
 	}
-
+	
+	/**
+	 * getter du stick
+	 * @return
+	 */
 	private int getStickNumber() {
 		// TODO Auto-generated method stub
 		return stick.getStickNumber();
 	}
-
+	
+	/**
+	 * getter de l'ia
+	 * @return
+	 */
 	public Player getIa() {
 		return ia;
 	}
-
+	/**
+	 * setter de l'ia
+	 * @param ia
+	 */
 	public void setIa(Player ia) {
 		this.ia = ia;
 	}
-
+	/**
+	 * getter du player
+	 * @return
+	 */
 	public Player getPlayer() {
 		return player;
 	}
-
+	/**
+	 * setter du player
+	 * @param player
+	 */
 	public void setPlayer(Player player) {
 		this.player = player;
 	}
-
+	/**
+	 * méthode isWinner
+	 * @return
+	 */
 	public boolean isWinner() {
 		return Winner;
 	}
-
+	/**
+	 * Setter du winner
+	 * 
+	 */
 	public void setWinner(boolean winner) {
 		Winner = winner;
 	}
-
+	/**
+	 * Getter du stick
+	 * @return
+	 */
 	public Stick getStick() {
 		return stick;
 	}
-
+	/**
+	 * setter du stick
+	 * @param stick
+	 */
 	public void setStick(Stick stick) {
 		this.stick = stick;
 	}
