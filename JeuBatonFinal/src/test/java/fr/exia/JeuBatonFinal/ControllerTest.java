@@ -8,6 +8,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import fr.exia.JeuBatonFinal.controller.Controller;
+import fr.exia.JeuBatonFinal.model.Player;
+import fr.exia.JeuBatonFinal.model.Stick;
+
 public class ControllerTest {
 
 	@BeforeClass
@@ -56,8 +60,21 @@ public class ControllerTest {
 		Stick stick = new Stick();
 		controller.setStick(stick);
 		assertEquals(stick, controller.getStick());
-		
-		
+	}
+	
+	@Test
+	public void testIsWinner() {
+		Controller controller = new Controller ();
+		controller.setWinner(true);
+		assertEquals(true, controller.isWinner());
+	}
+	
+	
+	@Test
+	public void testSetWinner() {
+		Controller controller = new Controller ();
+		controller.setWinner(true);
+		assertEquals(true, controller.isWinner());
 	}
 
 }

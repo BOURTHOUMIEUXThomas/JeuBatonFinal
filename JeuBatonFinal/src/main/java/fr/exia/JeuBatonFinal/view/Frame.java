@@ -1,6 +1,8 @@
-package fr.exia.JeuBatonFinal;
+package fr.exia.JeuBatonFinal.view;
 
 import javax.swing.JFrame;
+
+import fr.exia.JeuBatonFinal.model.Stick;
 
 public class Frame extends JFrame {
 	

@@ -1,4 +1,4 @@
-package fr.exia.JeuBatonFinal;
+package fr.exia.JeuBatonFinal.model;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -49,11 +49,11 @@ public class Player {
 		SoustractionNumber = soustractionNumber;
 	}
 
-	public static Stick getStick() {
+	public Stick getStick() {
 		return stick;
 	}
 
-	public static void setStick(Stick stick) {
+	public void setStick(Stick stick) {
 		Player.stick = stick;
 	}
 

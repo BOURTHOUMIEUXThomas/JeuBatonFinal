@@ -1,4 +1,4 @@
-package fr.exia.JeuBatonFinal;
+package fr.exia.JeuBatonFinal.model;
 
 public class Stick {
 

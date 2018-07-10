@@ -11,13 +11,14 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import fr.exia.JeuBatonFinal.model.Player;
 import fr.exia.JeuBatonFinal.model.Stick;
 
 /**
  * @author btxth
  *
  */
-public class StickTest {
+public class PlayerTest {
 
 	/**
 	 * @throws java.lang.Exception
@@ -48,34 +49,23 @@ public class StickTest {
 	}
 
 	/**
-	 * Test method for {@link fr.exia.JeuBatonFinal.model.Stick#Soustraction(int)}.
+	 * Test method for {@link fr.exia.JeuBatonFinal.model.Player#getStick()}.
 	 */
 	@Test
-	public void testSoustraction() {
+	public void testGetStick() {
 		Stick stick = new Stick();
-		stick.setStickNumber(20);
-		stick.Soustraction(5);
-		assertEquals(15, stick.getStickNumber());
+		Player player = new Player (stick);
+		assertEquals(stick, player.getStick());
 	}
 
 	/**
-	 * Test method for {@link fr.exia.JeuBatonFinal.model.Stick#getStickNumber()}.
+	 * Test method for {@link fr.exia.JeuBatonFinal.model.Player#setStick(fr.exia.JeuBatonFinal.model.Stick)}.
 	 */
 	@Test
-	public void testGetStickNumber() {
+	public void testSetStick() {
 		Stick stick = new Stick();
-		stick.setStickNumber(20);
-		assertEquals(20, stick.getStickNumber());
-	}
-
-	/**
-	 * Test method for {@link fr.exia.JeuBatonFinal.model.Stick#setStickNumber(int)}.
-	 */
-	@Test
-	public void testSetStickNumber() {
-		Stick stick = new Stick();
-		stick.setStickNumber(20);
-		assertEquals(20, stick.getStickNumber());
+		Player player = new Player (stick);
+		assertEquals(stick, player.getStick());
 	}
 
 }

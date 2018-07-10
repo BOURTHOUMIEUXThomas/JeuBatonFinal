@@ -1,8 +1,10 @@
-package fr.exia.JeuBatonFinal;
+package fr.exia.JeuBatonFinal.view;
 
 import java.awt.Graphics;
 
 import javax.swing.JPanel;
+
+import fr.exia.JeuBatonFinal.model.Stick;
 
 public class Panel extends JPanel{
 	

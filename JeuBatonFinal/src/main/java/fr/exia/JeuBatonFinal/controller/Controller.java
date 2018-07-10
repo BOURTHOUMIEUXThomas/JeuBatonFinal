@@ -1,6 +1,10 @@
-package fr.exia.JeuBatonFinal;
+package fr.exia.JeuBatonFinal.controller;
 
 import java.util.Scanner;
+
+import fr.exia.JeuBatonFinal.model.Player;
+import fr.exia.JeuBatonFinal.model.Stick;
+import fr.exia.JeuBatonFinal.view.Frame;
 
 public class Controller {
 
