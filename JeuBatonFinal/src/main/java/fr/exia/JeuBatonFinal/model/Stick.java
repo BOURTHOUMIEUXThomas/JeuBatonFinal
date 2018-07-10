@@ -1,5 +1,9 @@
 package fr.exia.JeuBatonFinal.model;
-
+/**
+ * 
+ * @author btxth
+ *
+ */
 public class Stick {
 
 	public int StickNumber;
