@@ -5,19 +5,23 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 import fr.exia.JeuBatonFinal.model.Stick;
-
+/**
+ * 
+ * @author btxth
+ *
+ */
 public class Panel extends JPanel{
 	
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	private Stick stick;
 	
 	public Panel(Stick stick) {
 		this.stick = stick;
 	}
-	
+	/**
+	 * Affichage dans la fenetre
+	 */
 	@Override
 	public void paint(Graphics g) {
 		super.repaint();

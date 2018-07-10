@@ -3,12 +3,14 @@ package fr.exia.JeuBatonFinal.view;
 import javax.swing.JFrame;
 
 import fr.exia.JeuBatonFinal.model.Stick;
-
+/**
+ * 
+ * @author btxth
+ *
+ */
 public class Frame extends JFrame {
 	
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	private Panel panel;
 	
