@@ -6,15 +6,28 @@ import fr.exia.JeuBatonFinal.model.Player;
 import fr.exia.JeuBatonFinal.model.Stick;
 import fr.exia.JeuBatonFinal.view.Frame;
 
+/**
+ * 
+ * @author btxth
+ *
+ */
 public class Controller {
 
+	/**
+	 * 
+	 */
 	public Player ia;
+	
+	
 	public Player player;
 	public boolean Winner;
 	public Stick stick;
 	public boolean turn;
 	public int oponent;
 
+	/**
+	 * 
+	 */
 	public Controller() {
 		stick = new Stick();
 		player = new Player(stick);
@@ -22,6 +35,9 @@ public class Controller {
 
 	}
 
+	/**
+	 * 
+	 */
 	public void NewTurn() {
 		if (turn == true) {
 			if (stick.getStickNumber() <= 1) {

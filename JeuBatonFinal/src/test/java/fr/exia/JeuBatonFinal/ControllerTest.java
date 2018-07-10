@@ -13,6 +13,9 @@ import fr.exia.JeuBatonFinal.model.Player;
 import fr.exia.JeuBatonFinal.model.Stick;
 
 public class ControllerTest {
+	
+	private Controller controller;
+	
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -24,6 +27,8 @@ public class ControllerTest {
 
 	@Before
 	public void setUp() throws Exception {
+		this.controller = new Controller();
+		
 	}
 
 	@After
@@ -32,7 +37,6 @@ public class ControllerTest {
 
 	@Test
 	public void testSetIa() {
-		Controller controller = new Controller();
 		Player player = new Player(null);
 		controller.setIa(player);
 		assertEquals(player, controller.getIa());
@@ -40,7 +44,6 @@ public class ControllerTest {
 
 	@Test
 	public void testGetPlayer() {
-		Controller controller = new Controller();
 		Player player = new Player (null);
 		controller.setPlayer(player);
 		assertEquals(player, controller.getPlayer());
@@ -48,7 +51,6 @@ public class ControllerTest {
 
 	@Test
 	public void testGetStick() {
-		Controller controller = new Controller ();
 		Stick stick = new Stick();
 		controller.setStick(stick);
 		assertEquals(stick, controller.getStick());
@@ -56,7 +58,6 @@ public class ControllerTest {
 
 	@Test
 	public void testSetStick() {
-		Controller controller = new Controller ();
 		Stick stick = new Stick();
 		controller.setStick(stick);
 		assertEquals(stick, controller.getStick());
@@ -64,7 +65,6 @@ public class ControllerTest {
 	
 	@Test
 	public void testIsWinner() {
-		Controller controller = new Controller ();
 		controller.setWinner(true);
 		assertEquals(true, controller.isWinner());
 	}
@@ -72,7 +72,6 @@ public class ControllerTest {
 	
 	@Test
 	public void testSetWinner() {
-		Controller controller = new Controller ();
 		controller.setWinner(true);
 		assertEquals(true, controller.isWinner());
 	}
