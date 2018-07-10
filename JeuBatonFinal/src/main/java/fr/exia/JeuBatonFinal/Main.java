@@ -10,8 +10,8 @@ import fr.exia.JeuBatonFinal.controller.Controller;
 public class Main {
 
 	/**
-	 * 
-	 * @param args
+	 * Controller
+	 * @param args tableau
 	 */
 	public static void main(String[] args) {
 		Controller controller = new Controller();

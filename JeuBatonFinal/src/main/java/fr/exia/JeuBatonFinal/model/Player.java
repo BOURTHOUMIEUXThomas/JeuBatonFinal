@@ -18,7 +18,7 @@ public class Player {
 	public static Stick stick;
 	/**
 	 * méthode player ou on initialise le nb de soustraction a 0 qu'on chabgera ensuite poar l'entrée clavier
-	 * @param stick
+	 * @param stick il prends le nb de stick en paramètre pour pouvoir ensuite lui soustraire le nb de batons a enlever
 	 */
 	public Player(Stick stick) {
 		SoustractionNumber = 0;
@@ -34,7 +34,7 @@ public class Player {
 	}
 	/**
 	 * getter du soustraction number
-	 * @return
+	 * @return SoustractionNumber
 	 */
 	public int getSoustractionNumber() {
 		return SoustractionNumber;
@@ -65,21 +65,21 @@ public class Player {
 	}
 	/**
 	 * setter du soustraction number 
-	 * @param soustractionNumber
+	 * @param soustractionNumber le setter prends en paramètre SoustractionNumber
 	 */
 	public void setSoustractionNumber(int soustractionNumber) {
 		SoustractionNumber = soustractionNumber;
 	}
 	/**
 	 * getter du stick 
-	 * @return
+	 * @return stick
 	 */
 	public Stick getStick() {
 		return stick;
 	}
 	/**
 	 * setter du stick 
-	 * @param stick
+	 * @param stick setter du stick prends le nb de stick en paramètre
 	 */
 	public void setStick(Stick stick) {
 		Player.stick = stick;

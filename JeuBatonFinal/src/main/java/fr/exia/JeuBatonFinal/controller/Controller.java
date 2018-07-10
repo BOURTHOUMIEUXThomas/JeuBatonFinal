@@ -126,8 +126,8 @@ public class Controller {
 
 	/**
 	 * Méthode qui affiche le nombre de stick et le nombre de stick que l'ia a enlever
-	 * @param stickIA
-	 * @return
+	 * @param stickIA il prends en paramètre le nombre de stick que l'ia a enlever
+	 * @return le nombre de stick de l'ia
 	 */
 	public int IAStickSoustraction(int stickIA) {
 		System.out.println("\n	Il y a " + this.getStickNumber() + "Il a enlever" + stickIA);
@@ -156,56 +156,56 @@ public class Controller {
 	
 	/**
 	 * getter de l'ia
-	 * @return
+	 * @return ia 
 	 */
 	public Player getIa() {
 		return ia;
 	}
 	/**
 	 * setter de l'ia
-	 * @param ia
+	 * @param ia le setter prends en paramètre 
 	 */
 	public void setIa(Player ia) {
 		this.ia = ia;
 	}
 	/**
 	 * getter du player
-	 * @return
+	 * @return player
 	 */
 	public Player getPlayer() {
 		return player;
 	}
 	/**
 	 * setter du player
-	 * @param player
+	 * @param player le setter prends en param-tre le player (comme pour l'ia) 
 	 */
 	public void setPlayer(Player player) {
 		this.player = player;
 	}
 	/**
 	 * méthode isWinner
-	 * @return
+	 * @return Winner 
 	 */
 	public boolean isWinner() {
 		return Winner;
 	}
 	/**
 	 * Setter du winner
-	 * 
+	 * @param winner le setter prends en paramètre le true ou false du winner ou loser
 	 */
 	public void setWinner(boolean winner) {
 		Winner = winner;
 	}
 	/**
 	 * Getter du stick
-	 * @return
+	 * @return stick
 	 */
 	public Stick getStick() {
 		return stick;
 	}
 	/**
 	 * setter du stick
-	 * @param stick
+	 * @param stick le setteur prends en paramètre le nb de stick 
 	 */
 	public void setStick(Stick stick) {
 		this.stick = stick;
