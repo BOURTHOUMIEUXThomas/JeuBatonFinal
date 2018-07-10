@@ -15,7 +15,7 @@ public class Player {
 
 	public void IA() {
 		setSoustractionNumber(new Random().nextInt(3) + 1);
-		System.out.println("L'ordinateur retire "+SoustractionNumber+" bâton(s).");
+		System.out.println("L'ordinateur retire " + SoustractionNumber + " bâton(s).");
 		stick.Soustraction(SoustractionNumber);
 	}
 
@@ -24,14 +24,17 @@ public class Player {
 	}
 
 	public void PlayerTurn() {
-		System.out.println("A vous de jouer " + stick.getStickNumber());
+		System.out.println("Il reste " + stick.getStickNumber() + " bâton(s).");
+		System.out.println("A vous de jouer :");
+
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		int scan = sc.nextInt();
-		if(scan != 1 && scan != 2 && scan != 3) {
+		if (scan != 1 && scan != 2 && scan != 3) {
 			do {
 				System.out.println("Le nombre doit être compris entre 1 et 3.");
 				scan = sc.nextInt();
-			}while(scan != 1 && scan != 2 && scan != 3);
+			} while (scan != 1 && scan != 2 && scan != 3);
 
 			setSoustractionNumber(scan);
 			stick.Soustraction(SoustractionNumber);
@@ -39,7 +42,7 @@ public class Player {
 			setSoustractionNumber(scan);
 			stick.Soustraction(SoustractionNumber);
 		}
-		System.out.println("Vous avez retiré "+scan+" bâton(s).");
+		System.out.println("Vous avez retiré " + scan + " bâton(s).");
 	}
 
 	public void setSoustractionNumber(int soustractionNumber) {

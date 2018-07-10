@@ -28,22 +28,36 @@ public class ControllerTest {
 
 	@Test
 	public void testSetIa() {
-		fail("Not yet implemented");
+		Controller controller = new Controller();
+		Player player = new Player(null);
+		controller.setIa(player);
+		assertEquals(player, controller.getIa());
 	}
 
 	@Test
 	public void testGetPlayer() {
-		fail("Not yet implemented");
+		Controller controller = new Controller();
+		Player player = new Player (null);
+		controller.setPlayer(player);
+		assertEquals(player, controller.getPlayer());
 	}
 
 	@Test
 	public void testGetStick() {
-		
+		Controller controller = new Controller ();
+		Stick stick = new Stick();
+		controller.setStick(stick);
+		assertEquals(stick, controller.getStick());
 	}
 
 	@Test
 	public void testSetStick() {
-		fail("Not yet implemented");
+		Controller controller = new Controller ();
+		Stick stick = new Stick();
+		controller.setStick(stick);
+		assertEquals(stick, controller.getStick());
+		
+		
 	}
 
 }
